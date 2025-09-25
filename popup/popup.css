@@ -1,0 +1,94 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  width: 320px;
+  background: #f8f9fb;
+  color: #202124;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid #cbd5e1;
+}
+
+button {
+  cursor: pointer;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+button[aria-pressed="true"],
+button:hover {
+  background: #1d4ed8;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#landmark-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.landmark-item {
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.landmark-meta {
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.landmark-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.landmark-actions button {
+  background: #ef4444;
+}
+
+.landmark-actions button.secondary {
+  background: #6366f1;
+}
