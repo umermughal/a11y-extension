@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A11y Lab</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main>
+    <h1>A11y Lab</h1>
+    <section>
+      <h2>Mode</h2>
+      <div class="toggle-group">
+        <button id="mode-edit" aria-pressed="false">Edit mode</button>
+        <button id="mode-preview" aria-pressed="false">Preview mode</button>
+      </div>
+    </section>
+    <section>
+      <h2>Create landmark</h2>
+      <label>
+        Name
+        <input id="landmark-label" type="text" placeholder="e.g. Main content" />
+      </label>
+      <label>
+        Landmark type
+        <select id="landmark-role">
+          <option value="main">Main</option>
+          <option value="banner">Banner</option>
+          <option value="navigation">Navigation</option>
+          <option value="complementary">Complementary</option>
+          <option value="contentinfo">Content info</option>
+          <option value="region">Region</option>
+        </select>
+      </label>
+      <label>
+        Shortcut (Alt+Key)
+        <input id="landmark-shortcut" type="text" placeholder="Alt+1" />
+      </label>
+      <button id="start-selection">Select area</button>
+    </section>
+    <section>
+      <h2>Configured landmarks</h2>
+      <ul id="landmark-list" aria-live="polite"></ul>
+    </section>
+    <section>
+      <h2>Jump menu</h2>
+      <button id="toggle-jump-menu">Toggle jump menu</button>
+    </section>
+  </main>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

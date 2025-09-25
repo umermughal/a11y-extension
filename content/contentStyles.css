@@ -1,0 +1,119 @@
+#a11y-lab-overlay {
+  position: absolute;
+  border: 2px solid #3b82f6;
+  background: rgba(59, 130, 246, 0.15);
+  pointer-events: none;
+  z-index: 2147483647;
+  display: none;
+}
+
+html.a11y-lab-selecting,
+html.a11y-lab-selecting body {
+  cursor: crosshair !important;
+}
+
+.a11y-lab-selection-notice {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.75rem 1rem;
+  background: #1d4ed8;
+  color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  z-index: 2147483647;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+#a11y-lab-selection-actions {
+  position: absolute;
+  display: none;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+  z-index: 2147483647;
+  font-family: system-ui, sans-serif;
+}
+
+.a11y-lab-selection-actions button {
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+  color: #fff;
+}
+
+.a11y-lab-selection-actions__save {
+  background: #22c55e;
+}
+
+.a11y-lab-selection-actions__save:hover,
+.a11y-lab-selection-actions__save:focus {
+  background: #16a34a;
+  outline: 2px solid #bbf7d0;
+  outline-offset: 2px;
+}
+
+.a11y-lab-selection-actions__cancel {
+  background: #ef4444;
+}
+
+.a11y-lab-selection-actions__cancel:hover,
+.a11y-lab-selection-actions__cancel:focus {
+  background: #dc2626;
+  outline: 2px solid #fecaca;
+  outline-offset: 2px;
+}
+
+#a11y-lab-jump-menu {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(15, 23, 42, 0.95);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  width: 240px;
+  max-height: 60vh;
+  overflow: auto;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
+  z-index: 2147483647;
+  font-family: system-ui, sans-serif;
+}
+
+.a11y-lab-jump-menu__title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.a11y-lab-jump-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.a11y-lab-jump-menu__list button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #2563eb;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.a11y-lab-jump-menu__list button:hover,
+.a11y-lab-jump-menu__list button:focus {
+  background: #1d4ed8;
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
