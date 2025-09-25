@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "A11y Lab",
+  "version": "1.0.0",
+  "description": "Experiment with accessibility landmarks, shortcuts, and jump menus on any page.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "A11y Lab"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/contentScript.js"],
+      "css": ["content/contentStyles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
